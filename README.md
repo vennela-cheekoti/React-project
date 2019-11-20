@@ -2,6 +2,7 @@ To create react app use:
 ### create-react-app appname
 
 To run the application use:
+### npm install
 ### npm start
 
 To use Material Design Bootstrap(MDB) use:
