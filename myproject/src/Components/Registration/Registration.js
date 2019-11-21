@@ -1,12 +1,14 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 import './Registration.css'
 
 const Registration = () => {
   return (
     <MDBContainer>
       <MDBRow>
-        <MDBCol md="6">
+        <MDBCol md="8">
+        <MDBCard className="card">
+            <MDBCardBody>
           <form>
             <p className="h4 text-center mb-4">Sign up</p>
             <label htmlFor="defaultFormRegisterNameEx" className="grey-text">
@@ -56,6 +58,8 @@ const Registration = () => {
               </MDBBtn>
             </div>
           </form>
+          </MDBCardBody>
+          </MDBCard>
         </MDBCol>
       </MDBRow>
     </MDBContainer>
