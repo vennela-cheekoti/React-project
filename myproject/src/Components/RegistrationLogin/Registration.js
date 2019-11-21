@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
-import './Registration.css'
+import './RegistrationLogin.css'
 
 const Registration = () => {
   return (

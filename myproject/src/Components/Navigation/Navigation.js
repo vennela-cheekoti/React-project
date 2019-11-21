@@ -3,7 +3,9 @@ import {
 MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBFormInline,
 MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from "../RegistrationLogin/Login";
+import Registration from "../RegistrationLogin/Registration";
 
 class Navigation extends Component {
 // state = {
@@ -24,15 +26,19 @@ render() {
         {/* <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar> */}
           <MDBNavbarNav right>
-            <MDBNavItem active>
-              <MDBNavLink to="#!">SignUp</MDBNavLink>
+            <MDBNavItem>
+              <MDBNavLink to="/">SignUp</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">SignIn</MDBNavLink>
+              <MDBNavLink to="/login">SignIn</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
         {/* </MDBCollapse> */}
       </MDBNavbar>
+      <Switch>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Registration} />
+      </Switch>
     </Router>
     );
   }
